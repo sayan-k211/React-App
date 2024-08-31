@@ -1,0 +1,114 @@
+/* Global styles for the entire application */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f0f0; /* Default background color */
+}
+
+/* Styles specific to the homepage */
+.homepage {
+  background-image: url('/src/assets/images/bg.jpg'); /* Background image for homepage */
+  background-size: cover; /* Ensure background covers the entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  color: white; /* White text color for contrast */
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Navbar styles */
+nav {
+  background: #4CAF50; /* Green background color */
+  height: 60px; /* Fixed height for the navbar */
+  width: 100%; /* Full width */
+  position: fixed; /* Fixes the navbar at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures navbar is above other content */
+  display: flex; /* Flexbox layout */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space between the logo and navigation links */
+  padding: 0 20px; /* Padding on the left and right */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Site logo styles */
+label.site-logo {
+  color: white; /* White text for the logo */
+  font-size: 24px; /* Larger font size */
+  font-weight: bold; /* Bold font weight */
+}
+
+/* Navigation list styles */
+nav ul {
+  display: flex; /* Horizontal list layout */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  list-style-type: none; /* Remove list item markers (bullets) */
+}
+
+nav ul li {
+  margin: 0 10px; /* Spacing between list items */
+}
+
+/* Styles for navigation links */
+nav ul li a {
+  color: white; /* White text color */
+  font-size: 16px; /* Standard font size */
+  padding: 7px 10px; /* Padding around the text */
+  border-radius: 5px; /* Slightly rounded corners */
+  text-transform: uppercase; /* Uppercase text */
+}
+
+/* Hover and active state styles for links */
+a.active, a:hover {
+  background: #45a049; /* Darker green background on hover or when active */
+  transition: .5s; /* Smooth transition effect */
+}
+
+/* Responsive Navbar for smaller screens */
+.menu-toggle-label {
+  display: none; /* Hidden by default */
+}
+
+#menu-toggle {
+  display: none; /* Hidden checkbox for menu toggle */
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column; /* Stack navigation items vertically */
+      position: fixed; /* Fix position for dropdown effect */
+      top: 60px; /* Below the navbar */
+      left: -100%; /* Initially hidden off-screen */
+      width: 100%; /* Full width */
+      background: #333; /* Dark background for mobile menu */
+      transition: all 0.5s ease; /* Smooth slide-in transition */
+  }
+
+  nav ul li {
+      margin: 20px 0; /* More space between items on small screens */
+      text-align: center; /* Center-align text */
+  }
+
+  nav ul li a {
+      font-size: 18px; /* Slightly larger font size for better readability */
+  }
+
+  #menu-toggle:checked ~ ul {
+      left: 0; /* Slide menu into view when checkbox is checked */
+  }
+
+  .menu-toggle-label {
+      display: block; /* Display the menu toggle on small screens */
+      font-size: 30px; /* Larger font size for visibility */
+      color: white; /* White color for the toggle label */
+      cursor: pointer; /* Pointer cursor to indicate clickability */
+  }
+}

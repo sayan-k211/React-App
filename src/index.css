@@ -1,0 +1,85 @@
+/* Root variables for consistent styling across the application */
+:root {
+  /* Base font settings */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Color scheme settings for light and dark modes */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87); /* Default text color */
+  background-color: #242424; /* Default background color */
+
+  /* Optimizations for font rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Styling for anchor links */
+a {
+  font-weight: 500; /* Slightly bolder text */
+  color: #646cff; /* Default link color */
+  text-decoration: inherit; /* Inherits text decoration, typically underlined */
+  margin: 10px; /* Adds some space around links */
+}
+
+/* Hover state for anchor links */
+a:hover {
+  color: #535bf2; /* Changes link color on hover */
+}
+
+/* Base styling for the body */
+body {
+  margin: 0; /* Removes default margin */
+  display: block; /* Ensures block layout instead of flexbox */
+  background-color: #f0f0f0; /* Light background for consistency */
+  color: #000; /* Ensures text is dark for readability */
+}
+
+/* Styling for h1 headers */
+h1 {
+  font-size: 3.2em; /* Large font size */
+  line-height: 1.1; /* Tight line height for headers */
+}
+
+/* Styling for buttons */
+button {
+  border-radius: 8px; /* Rounds the button corners */
+  border: 1px solid transparent; /* Transparent border by default */
+  padding: 0.6em 1.2em; /* Padding for button content */
+  font-size: 1em; /* Standard font size */
+  font-weight: 500; /* Medium weight for button text */
+  font-family: inherit; /* Inherits font from parent elements */
+  background-color: #1a1a1a; /* Dark background for buttons */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  transition: border-color 0.25s; /* Smooth transition for border color */
+}
+
+/* Hover state for buttons */
+button:hover {
+  border-color: #646cff; /* Changes border color on hover */
+}
+
+/* Focus states for buttons */
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color; /* Ensures visible focus outline */
+}
+
+/* Light mode specific styles */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547; /* Darker text color for light mode */
+    background-color: #ffffff; /* Light background color */
+  }
+  
+  a:hover {
+    color: #747bff; /* Lighter link color on hover for light mode */
+  }
+  
+  button {
+    background-color: #f9f9f9; /* Light background for buttons in light mode */
+  }
+}

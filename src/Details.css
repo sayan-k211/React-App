@@ -1,0 +1,136 @@
+/* Main content section styling */
+main {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-color: #f0f0f0; /* Light background color for details page */
+}
+
+/* Article container styling */
+article {
+  background-color: #f9f9f9; /* Light background color for the article */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  width: 100%;
+  max-width: 900px; /* Restricts maximum width for better readability */
+  margin: 0 auto; /* Centers the article horizontally */
+  box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Header styles */
+article header h1 {
+  font-size: 32px; /* Large font size for the main header */
+  text-align: center; /* Centered text alignment */
+}
+
+article header h2 {
+  font-size: 20px; /* Slightly smaller font size for the subheader */
+  margin-bottom: 10px;
+  text-align: center;
+  color: red; /* Red color for emphasis */
+  font-family: cursive; /* Cursive font for a distinctive look */
+}
+
+/* Figure styles */
+article figure {
+  margin: 20px 0; /* Vertical spacing around the figure */
+  text-align: center; /* Center the figure */
+  width: 100%; /* Full width for the figure element */
+}
+
+article figure img {
+  max-width: 100%; /* Ensure the image scales down to fit */
+  height: auto; /* Maintain the aspect ratio of the image */
+  border-radius: 5px; /* Slightly rounded corners for the image */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Section styles */
+article section {
+  margin-bottom: 20px;
+  background-color: #ffffff; /* White background for sections */
+  border-radius: 5px;
+  padding: 20px;
+}
+
+article section h3 {
+  font-size: 24px; /* Larger font size for section headers */
+  margin-bottom: 10px;
+}
+
+article section p {
+  font-size: 16px; /* Standard font size for paragraph text */
+  line-height: 1.5; /* Comfortable line spacing */
+}
+
+/* Special styling for the procedure section */
+article section.procedure {
+  background-color: black; /* Dark background for contrast */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: white; /* White text on dark background */
+}
+
+article section.procedure h3 {
+  font-size: 24px; /* Larger font size for the procedure header */
+  margin-bottom: 20px;
+}
+
+article section.procedure p {
+  font-size: 16px;
+  line-height: 1.6; /* Slightly larger line height for readability */
+}
+
+/* Styling for body-text sections */
+article section.body-text {
+  background-color: #3d3d3d; /* Dark grey background for body text */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: white; /* White text on dark background */
+}
+
+article section.body-text h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+article section.body-text p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  article {
+    padding: 15px;
+    margin: 0 10px; /* Adds margin on the sides for smaller screens */
+  }
+
+  article section {
+    padding: 15px;
+  }
+
+  article section h3 {
+    font-size: 20px; /* Smaller header font size for better fit */
+  }
+
+  article section p {
+    font-size: 14px; /* Smaller text size for paragraphs */
+  }
+
+  .cart-text header h1 {
+    font-size: 28px; /* Smaller main header on small screens */
+  }
+
+  .cart-text header h2 {
+    font-size: 15px; /* Smaller subheader on small screens */
+  }
+}
